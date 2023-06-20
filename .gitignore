@@ -1,0 +1,15 @@
+*.iml
+.gradle
+.idea
+/local.properties
+**/build
+/captures
+/infer-out
+*.apk
+.externalNativeBuild
+*.hprof
+output.json
+/reports
+referal
+.cxx
+*.keystore
