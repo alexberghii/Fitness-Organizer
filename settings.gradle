@@ -13,5 +13,7 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Fitness Organizer"
-include ':app'
-include ':feature:reminders'
+include(':app')
+include(':feature:reminders:api')
+include(':feature:reminders:impl')
+include(':core')
