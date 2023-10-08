@@ -1,4 +1,3 @@
-import AppDependencies.implementation
 import AppDependencies.testImplementation
 
 plugins {
@@ -7,27 +6,23 @@ plugins {
 }
 
 android {
-    namespace = "com.alexberghii.reminders.api"
+    namespace = "com.alexberghii.feature.reminders.api"
     compileSdk = AppConfig.compileSdk
 
     defaultConfig {
         minSdk = AppConfig.minSdk
-        targetSdk = AppConfig.targetSdk
+
         testInstrumentationRunner = AppConfig.androidTestInstrumentation
         consumerProguardFiles("consumer-rules.pro")
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
-    }
-
-    buildFeatures {
-        viewBinding = true
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 
     buildTypes {
@@ -40,6 +35,6 @@ android {
 
 dependencies {
 
-    implementation(AppDependencies.uiLibraries)
+    implementation(AppDependencies.coreKtx)
     testImplementation(AppDependencies.testLibraries)
 }
