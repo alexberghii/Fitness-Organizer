@@ -1,10 +1,18 @@
 package com.alexberghii.core
 
 import androidx.lifecycle.ViewModel
+import com.alexberghii.core.navigation.NavEvent
 import kotlinx.coroutines.flow.MutableStateFlow
 
 
 abstract class BaseViewModel : ViewModel() {
+
+    val navEvent: VMStateFlow<NavEvent> = createVMStateFlow(NavEvent.None)
+
+    protected fun navigate(navEvent: NavEvent) {
+        this.navEvent.stateValue = navEvent
+        this.navEvent.stateValue = NavEvent.None
+    }
 
     // TODO swap with explicit backing fields when they are released
     private class VMStateFlowImpl<T>(

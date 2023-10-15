@@ -3,7 +3,6 @@ import AppDependencies.api
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("com.google.devtools.ksp")
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
 }
@@ -38,7 +37,7 @@ dependencies {
 
     implementation(AppDependencies.coreKtx)
     api(AppDependencies.roomLibraries)
-    ksp(AppDependencies.roomKsp)
+    kapt(AppDependencies.roomKapt)
     implementation(AppDependencies.hilt)
     kapt(AppDependencies.hiltKapt)
 }

@@ -13,7 +13,7 @@ object AppDependencies {
 
     private val room = "androidx.room:room-runtime:${Versions.room}"
     private val roomKtx = "androidx.room:room-ktx:${Versions.room}"
-    val roomKsp = "androidx.room:room-compiler:${Versions.room}"
+    val roomKapt = "androidx.room:room-compiler:${Versions.room}"
 
     val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
     val hiltKapt = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"

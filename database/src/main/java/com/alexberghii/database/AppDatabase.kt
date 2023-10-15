@@ -12,7 +12,8 @@ import com.alexberghii.database.entity.ReminderEntity
     version = 1,
     entities = [
         ReminderEntity::class
-    ]
+    ],
+    exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
 

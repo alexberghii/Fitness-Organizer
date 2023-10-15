@@ -2,7 +2,10 @@ package com.alexberghii.presentation.impl.reminders.reminder
 
 import android.os.Bundle
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.alexberghii.core.BaseFragment
+import com.alexberghii.core.navigation.NavEvent
+import com.alexberghii.core.utils.observeWithLifecycle
 import com.alexberghii.core.viewComponents.viewBinding
 import com.alexberghii.feature.reminders.impl.R
 import com.alexberghii.feature.reminders.impl.databinding.FragmentReminderBinding
@@ -25,6 +28,12 @@ class ReminderFragment : BaseFragment(R.layout.fragment_reminder) {
             tvTime.setOnClickListener { showTimePicker() }
             btnSave.setOnClickListener { viewModel.saveReminder(etTitle.text.toString(), tvTime.text.toString(), switchEnable.isChecked) }
         }
+
+        observeData()
+    }
+
+    private fun observeData() {
+        viewModel.navEvent.observeWithLifecycle(this, action = ::navigate)
     }
 
     private fun showTimePicker() {

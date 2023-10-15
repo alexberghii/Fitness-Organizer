@@ -40,6 +40,7 @@ android {
 dependencies {
 
     implementation(AppDependencies.uiLibraries)
+    implementation(AppDependencies.navigationLibraries)
     testImplementation(AppDependencies.testLibraries)
     androidTestImplementation(AppDependencies.androidTestLibraries)
 }
