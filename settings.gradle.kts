@@ -21,5 +21,6 @@ include(
     ":domain:reminders:api",
     ":domain:reminders:impl",
     ":data:reminders",
-    ":database"
+    ":database",
+    ":navigation"
 )

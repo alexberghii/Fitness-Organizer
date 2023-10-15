@@ -49,6 +49,7 @@ dependencies {
     implementation(project(":domain:reminders:impl"))
     implementation(project(":data:reminders"))
     implementation(project(":database"))
+    implementation(project(":navigation"))
 
     implementation(AppDependencies.uiLibraries)
     implementation(AppDependencies.navigationLibraries)

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="title">Title</string>
+    <string name="time">Time</string>
+    <string name="time_default">00:00</string>
+</resources>

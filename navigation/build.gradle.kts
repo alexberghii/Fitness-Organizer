@@ -1,16 +1,12 @@
-import AppDependencies.implementation
-import AppDependencies.testImplementation
-import AppDependencies.androidTestImplementation
+import AppDependencies.api
 
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    kotlin("kapt")
-    id("com.google.dagger.hilt.android")
 }
 
 android {
-    namespace = "com.alexberghii.feature.reminders.impl"
+    namespace = "com.alexberghii.navigation"
     compileSdk = AppConfig.compileSdk
 
     defaultConfig {
@@ -33,24 +29,9 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_17.toString()
     }
-
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
-    implementation(project(":core"))
-    implementation(project(":domain:reminders:api"))
-    implementation(project(":navigation"))
 
-    implementation(AppDependencies.uiLibraries)
-    implementation(AppDependencies.hilt)
-    kapt(AppDependencies.hiltKapt)
-    testImplementation(AppDependencies.testLibraries)
-    androidTestImplementation(AppDependencies.androidTestLibraries)
-}
-
-kapt {
-    correctErrorTypes = true
+    api(AppDependencies.navigationLibraries)
 }
